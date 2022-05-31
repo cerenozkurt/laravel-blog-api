@@ -1,0 +1,1167 @@
+{
+	"info": {
+		"_postman_id": "d7b6e909-4bcd-4407-9552-74727b15808c",
+		"name": "laravel-myblog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "frontend",
+			"item": [
+				{
+					"name": "posts",
+					"item": [
+						{
+							"name": "get- all posts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/front/posts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"front",
+										"posts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get- view posts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/front/posts/view",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"front",
+										"posts",
+										"view"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get- post by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/front/posts/15/id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"front",
+										"posts",
+										"15",
+										"id"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get- category post by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/front/posts/category/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"front",
+										"posts",
+										"category",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get- search post",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/front/posts/ad",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"front",
+										"posts",
+										"ad"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "comment",
+					"item": [
+						{
+							"name": "create-comments",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "isimdfdf",
+											"type": "default"
+										},
+										{
+											"key": "email",
+											"value": "email@m.com",
+											"type": "default"
+										},
+										{
+											"key": "comment",
+											"value": "yorum",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/front/comments/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"front",
+										"comments",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-comments",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/front/comments",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"front",
+										"comments"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "contact",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "ceren",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "ceren@mail.com",
+									"type": "default"
+								},
+								{
+									"key": "subject",
+									"value": "new subject",
+									"type": "default"
+								},
+								{
+									"key": "message",
+									"value": "hello world",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/front/contact?name=ceren",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"front",
+								"contact"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "ceren"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post-subscribe",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "c@mail.com",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/front/subscribe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"front",
+								"subscribe"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "categorys",
+					"item": [
+						{
+							"name": "get-categorys",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/admin/categorys",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"categorys"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create-category",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "category_name",
+											"value": "category 12",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/admin/categorys?category_name",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"categorys"
+									],
+									"query": [
+										{
+											"key": "category_name",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update-category",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "category_name",
+										"value": "",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "category_name",
+											"value": "category 5",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/admin/categorys/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"categorys",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "search-category",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/admin/categorys/a",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"categorys",
+										"a"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit-category",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/admin/categorys/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"categorys",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete-category",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/admin/categorys/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"categorys",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-total category",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/admin/categorys/total",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"categorys",
+										"total"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "posts",
+					"item": [
+						{
+							"name": "get-posts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/admin/posts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"posts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create-posts",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "deneme2",
+											"type": "default"
+										},
+										{
+											"key": "description",
+											"value": "description2",
+											"type": "default"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/ceren/Desktop/Ivır Zıvır/Başlıksız-1.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/admin/posts/create/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"posts",
+										"create",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit-posts",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/admin/posts/17",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"posts",
+										"17"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update-posts",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "deneme12345yklk6sd",
+											"type": "default"
+										},
+										{
+											"key": "description",
+											"value": "deneme12345er6",
+											"type": "default"
+										},
+										{
+											"key": "cat_id",
+											"value": "3",
+											"type": "default"
+										},
+										{
+											"key": "old_image",
+											"value": "posts/3qYhP6m7Rwpy0noLB8FxfOmA3uDIwldyyp2oqEs4.jpg",
+											"type": "default"
+										},
+										{
+											"key": "new_image",
+											"type": "file",
+											"src": "uzay_gemisi.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/admin/posts/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"posts",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete-posts",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/admin/posts/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"posts",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "search-posts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/admin/posts/a",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"posts",
+										"a"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "settings",
+					"item": [
+						{
+							"name": "get-settings",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/admin/settings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"settings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update-settings",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "header_logo",
+											"value": "header_logo",
+											"type": "default"
+										},
+										{
+											"key": "footer_logo",
+											"value": "footer_logo",
+											"type": "default"
+										},
+										{
+											"key": "footer_desc",
+											"value": "footer_desc",
+											"type": "default"
+										},
+										{
+											"key": "email",
+											"value": "email@mail.com",
+											"type": "default"
+										},
+										{
+											"key": "phone",
+											"value": "phone",
+											"type": "default"
+										},
+										{
+											"key": "address",
+											"value": "address",
+											"type": "default"
+										},
+										{
+											"key": "facebook",
+											"value": "facebook",
+											"type": "default"
+										},
+										{
+											"key": "instagram",
+											"value": "instagram",
+											"type": "default"
+										},
+										{
+											"key": "youtube",
+											"value": "youtube",
+											"type": "default"
+										},
+										{
+											"key": "about_title",
+											"value": "about_title",
+											"type": "default"
+										},
+										{
+											"key": "about_desc",
+											"value": "about_desc",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/admin/settings/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"settings",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "contacts",
+					"item": [
+						{
+							"name": "get-contacts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/admin/contacts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"contacts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete-contacts",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/admin/contacts/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"contacts",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "subscribes",
+					"item": [
+						{
+							"name": "get-subscribe",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "20|HZgsBsX1Cpl3opnioXWDuku4LGZBPKiESsCOfb3z",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/admin/subscribe",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"subscribe"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete-subscribe",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/admin/subscribe/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"subscribe",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "comments",
+					"item": [
+						{
+							"name": "get-comments",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/admin/comments",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"comments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete-comments",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/admin/comments/39",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"comments",
+										"39"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-totalComments",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/admin/comments/total",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"comments",
+										"total"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "get-admin-token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "7|HmULLqI30hD2wgyqYx9Ar1oYI5u2shuHWN37q1KO",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/admin/getTokens",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"getTokens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin-logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "14|Lck3h5o4uwB21LxWoLotDZ7WmUYdoH07RvjcGSpA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/admin/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "3|4P0i2GOVOHG4jsX0h61cDg1WVfLrhDoDKMk77JKz",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "admin-login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "ceren",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "default"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "ceren",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "ceren@mail.com",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
